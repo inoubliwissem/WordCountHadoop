@@ -1,0 +1,36 @@
+
+program: WordCoun with hadoop Framework
+
+
+Prerequisites:
+=========================================
+java JDK +7
+hadoop Framework
+maven +2
+=========================================
+create our project with maven tool
+=========================================
+create project maven:
+mvn archetype:generate
+ -DgroupId=com.hadoop.app
+ -DartifactId=hadoop
+ -DarchetypeArtifactId=maven-archetype-quickstart
+ -DinteractiveMode=false
+build our project :
+  cd hadoop
+  mvn package
+============================================
+Steps to run this project
+============================================
+example to input and output file:
+        input hdfs://localhost:8020/user/hdfs/test
+        output hdfs://localhost:8020/user/hdfs/rst
+
+hadoop jar [*.jar] [main class] [arguments]
+       example ===> hadoop jar target/wordcount.jar com.hadoop.App hdfs://localhost:8020/user/hdfs/test hdfs://localhost:8020/user/hdfs/rst
+=============================================
+in permission error case you use this commande line
+      hadoop jar [*.jar] [main class] [arguments]
+
+
+  
