@@ -54,6 +54,8 @@ public static class Reduce extends MapReduceBase implements Reducer<Text, IntWri
 	     conf.setOutputValueClass(IntWritable.class);
 
 	     conf.setMapperClass(Map.class);
+	     //this to acclerate the calcule
+	     // add partionner
 	     conf.setCombinerClass(Reduce.class);
              conf.setReducerClass(Reduce.class);
 
